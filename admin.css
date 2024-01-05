@@ -1,0 +1,134 @@
+.Headersection {
+text-align:end;
+    background-color: hsl(0, 0%, 20%);
+    position:sticky;
+    botton:100%;
+
+}
+
+.Headersection h1 {
+    color: #fff;
+    font-size: 35px;
+  
+  }
+
+.backbtn {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #0e285d;
+    color: #fff;
+    font-size: 15px;
+    float: left;
+    border: none;
+    cursor: pointer;
+    background-color: #333;
+
+    
+    
+
+}
+
+
+
+.backbtn i {
+    margin-right: 5px;
+}
+
+.backbtn:hover {
+    background-color: #555;
+}
+
+.bodysection {
+   width: 10px;
+     background:transparent;
+ 
+    border: 4px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+   padding: 30px 40px;
+   border-radius: 20px;
+  
+  
+  
+
+}
+
+body {
+display:flex;
+justify-content: center;
+align-items: center;
+min-width: 100vh;
+min-height: 100vh;
+    
+background: url('../uploads/security-voting.jpg') ;
+  background-size: cover;
+  background-position:center;
+ font-family: Arial, sans-serif;
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button#Loginbtn {
+    background-color: #0050ec;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 0.1s ease;
+    border-width: 0;
+    box-shadow: 1px 5px 0 0 #0e285d;
+}
+
+button#Loginbtn:hover {
+    background-color: #555;
+}
+
+button#Loginbtn:active {
+    transform: translateY(4px);
+    box-shadow: 0px 0px 0 0 #0e285d;
+}
+
+a {
+    color: #0050ec;
+    text-decoration: none;
+}
+.footer{
+position:sticky;
+top:100%;
+
+
+}
+
+
+

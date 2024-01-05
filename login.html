@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <style>
+ 
+
+    input[type="number"],
+        input[type="password"],
+        input[type="text"],
+        select {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 3px;
+            font-size: 16px;
+            margin-right: 5px; /* Add this line */
+            box-sizing: border-box; /* Add this line */
+            margin-bottom: 10px; /* Add this line to create some space between fields */
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+
+        #password-container {
+            display: flex;
+            justify-content: center; /* Center the items horizontally */
+            align-items: center; /* Center the items vertically */
+        }
+
+        #password {
+            width: 30%; /* Match the width of the number field */
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 3px;
+            font-size: 16px;
+            margin-right: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        #password-toggle {
+            display: flex;
+            align-items: center; /* Center the items vertically */
+        }
+
+        #password-toggle-text {
+            font-size: 14px;
+            color: #777;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+    #password-container:hover #password-toggle-text {
+        opacity: 1;
+    }
+   
+ </style>
+</head>
+<body>
+    
+    
+    <div id="HeaderSection">
+        <a href="index.html"><button id="backbtn">Back</button></a>
+        <center><h1 style="font-size: 40px;">Online Voting System</h1></center>
+    </div>
+    <hr>
+  
+    <div id="BodySection">
+        <center>
+        <h2 style="font-size: 30px;">Login</h2><br>
+        <form action="php/login.php" method="POST" enctype="multipart/form-data">
+            <input type="number" placeholder="Enter Mobile Number" id="mobile" name="mobile" required><br><br>
+            
+            <div id="password-container">
+                <input type="password" placeholder="Enter Password" id="password" name="password">
+                <div id="password-toggle">
+                    <i class="fas fa-eye" id="magic" onmousedown="togglePasswordVisibility('password')"></i>
+                </div>
+            </div>
+            <br>
+
+            <select name="Role" id="dropbox">Select Role
+                <option value="1">Voter</option>
+                <option value="2">Candidate</option>
+            </select><br><br>
+
+            
+
+            <br><br>
+            <button id="Loginbtn" type="submit">Login</button><br><br>
+            <h2 style="font-size: 25px;">New Here? <a href="routes/signup.html">Register Here</a></h2>
+        </form>
+    </center>
+    </div>
+</body>
+<script>
+    function togglePasswordVisibility(fieldId) {
+        var passwordInput = document.getElementById(fieldId);
+        var passwordToggleText = document.getElementById("password-toggle-text");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            passwordToggleText.textContent = "Hide Password";
+        } else {
+            passwordInput.type = "password";
+            passwordToggleText.textContent = "Show Password";
+        }
+    }
+   
+    
+</script>
+</html>
